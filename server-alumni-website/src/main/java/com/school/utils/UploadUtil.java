@@ -17,8 +17,8 @@ public class UploadUtil {
         String fileName = uuid + ext;
 //        地域节点
         String endpoint = "https://oss-cn-chengdu.aliyuncs.com";
-        String accessKeyId = "LTAI5tEfPZ6CM8hnp45qpPwn";
-        String accessKeySecret = "MSnE4hzA1B9QMInTBvcE396c1KWN7j";
+        String accessKeyId = "";
+        String accessKeySecret = "";
         OSS build = new OSSClientBuilder().build(endpoint, accessKeyId, accessKeySecret);
         build.putObject("waylon-personal-bucket", fileName, imgFile.getInputStream());
         build.shutdown();
